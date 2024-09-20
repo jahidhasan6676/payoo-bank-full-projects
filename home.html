@@ -1,13 +1,172 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>payoo home page</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font awesome cnd -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- font family cnd -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: "Outfit", sans-serif;
+        }
+    </style>
 </head>
+
 <body>
-    
-    
-    
+    <header>
+
+    </header>
+    <main class="flex justify-center">
+        <!-- mobile setup -->
+        <div class="mockup-phone">
+            <div class="camera"></div>
+            <div class="display">
+                <div class="w-[375px] artboard-demo phone-2 py-8 px-4">
+                    <!-- account balance start-->
+                    <div class="w-full flex justify-between stats bg-primary">
+                        <div class="  text-primary-content">
+                            <div class="stat">
+                                <div class="stat-title text-white">Account balance</div>
+                                <div id="current-balance" class="stat-value">9400</div>
+                            </div>
+                        </div>
+                        <!-- logout btn -->
+                        <div class="flex items-center">
+                            <div class="avatar flex flex-col items-center">
+                                <div class="w-24 rounded-full">
+                                  <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                                  
+                                </div>
+                                <p class="font-bold text-white">Jahid Hasan</p>
+                              </div>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <!-- heading start-->
+                    <div class=" space-y-2 ">
+                        <h3 class="text-2xl font-bold">🔥 Welcome to Payooo!</h3>
+                        <p class="font-medium text-sm">Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
+                    </div>
+                    <!-- heading end -->
+                    <!-- account balance end -->
+                    <div class="divider"></div>
+                    <!-- all feature -->
+                    <div class="w-full grid grid-cols-3 gap-3">
+                        <!-- 1st -->
+                        <div class="border-2 border-gray-400 rounded-lg px-1 py-3 flex flex-col items-center hover:bg-slate-300">
+                            <i class="fa-solid fa-wallet text-orange-400 text-xl"></i>
+                            <button  class=" text-xs font-bold 
+                        ">Add Money</button>
+                        </div>
+                        <!-- 2nd -->
+                        <div class="border-2 border-gray-400 rounded-lg px-1 py-3 flex flex-col items-center hover:bg-slate-300">
+                            <i class=" fa-solid fa-hand-holding-dollar text-orange-400 text-xl"></i>
+                            <button  class=" text-xs font-bold 
+                        ">Cashout</button>
+                        </div>
+                        <!-- 3rd -->
+                        <div class="border-2 border-gray-400 rounded-lg px-1 py-3 flex flex-col items-center hover:bg-slate-300">
+                            <i class="fa-solid fa-money-bill-transfer text-orange-400 text-xl"></i>
+                            <button  class=" text-xs font-bold 
+                        ">Transfer Money</button>
+                        </div>
+                        <!-- 4th -->
+                        <div class="border-2 border-gray-400 rounded-lg px-1 py-3 flex flex-col items-center hover:bg-slate-300">
+                            <i class="fa-solid fa-sack-dollar text-orange-400 text-xl"></i>
+                            <button  class=" text-xs font-bold 
+                        ">Get Bonus</button>
+                        </div>
+                        <!-- 5th -->
+                        <div class="border-2 border-gray-400 rounded-lg px-1 py-3 flex flex-col items-center hover:bg-slate-300">
+                            <i class="fa-solid fa-money-bill-trend-up text-orange-400 text-xl"></i>
+                            <button  class=" text-xs font-bold 
+                        ">Pay Bill</button>
+                        </div>
+                        <!-- 6th -->
+                        <div class="border-2 border-gray-400 rounded-lg px-1 py-3 flex flex-col items-center hover:bg-slate-300">
+                            <i class="fa-solid fa-money-check text-orange-400 text-xl"></i>
+                            <button  class=" text-xs font-bold 
+                        ">Transactions</button>
+                        </div>
+                    </div>
+                    <!-- all feature end -->
+
+                    <!-- latest payment section -->
+                    <div class="hidden w-full mt-5 h-[300px] space-y-2">
+                        <!-- heading -->
+                        <div class="flex  justify-between">
+                            <h2 class="text-xl font-bold text-black">Latest Payment</h2>
+                            <h3 class="text-xl font-medium ">View All</h3>
+                        </div>
+                        <!-- details -->
+                        <div class="space-y-3">
+                            <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-base-200 border">
+                                <div class="collapse-title text-xl font-medium"><h3 class="text-xl font-medium">Electricity Bill</h3>
+                                    <p class="text-sm">Today 01:44 AM</p>
+                                </div>
+                                
+                              </div>
+                              <!-- 2nd -->
+                              <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-base-200 border">
+                                <div class="collapse-title text-xl font-medium"><h3 class="text-xl font-medium">Bank Deposit</h3>
+                                    <p class="text-sm">Today 04:44 AM</p>
+                                </div>
+                                
+                              </div>
+                              <!-- 3rd -->
+                              <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-base-200 border">
+                                <div class="collapse-title text-xl font-medium"><h3 class="text-xl font-medium">Gas Bill</h3>
+                                    <p class="text-sm">Today 02:44 AM</p>
+                                </div>
+                                
+                              </div>
+                        </div>
+                    </div>
+                    <!-- latest payment section end -->
+
+                    <!-- add money form start-->
+                    <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl h-[300px] mt-5">
+                        <form class="card-body">
+                          <div class="form-control">
+                            <label class="label">
+                              <span class="label-text">Amount to Add</span>
+                            </label>
+                            <input id="input-addMoney-amount" type="text" placeholder="Amount" class="input input-bordered" required />
+                          </div>
+                          <div class="form-control">
+                            <label class="label">
+                              <span class="label-text">Pin Number</span>
+                            </label>
+                            <input id="input-addMoney-pin" type="password" placeholder="Enter 4digit pin number" class="input input-bordered" required />
+                          </div>
+                          <div class="form-control mt-6">
+                            <button id="add-money-btn" class="btn btn-primary">Add Money</button>
+                          </div>
+                        </form>
+                      </div>
+                    <!-- add money form end-->
+                     
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+<script src="js/utilities.js"></script>
+<script src="js/addMoney.js"></script>
+<script src="js/index.js"></script>
 </body>
+
 </html>
