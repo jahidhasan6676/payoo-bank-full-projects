@@ -64,25 +64,25 @@
                     <!-- all feature -->
                     <div class="w-full grid grid-cols-3 gap-3">
                         <!-- 1st -->
-                        <div class="border-2 border-gray-400 rounded-lg px-1 py-3 flex flex-col items-center hover:bg-slate-300">
+                        <div id="addMoney-show" class="border-2 border-gray-400 rounded-lg px-1 py-3 flex flex-col items-center hover:bg-slate-300">
                             <i class="fa-solid fa-wallet text-orange-400 text-xl"></i>
                             <button  class=" text-xs font-bold 
                         ">Add Money</button>
                         </div>
                         <!-- 2nd -->
-                        <div class="border-2 border-gray-400 rounded-lg px-1 py-3 flex flex-col items-center hover:bg-slate-300">
+                        <div id="CashOut-form" class="border-2 border-gray-400 rounded-lg px-1 py-3 flex flex-col items-center hover:bg-slate-300">
                             <i class=" fa-solid fa-hand-holding-dollar text-orange-400 text-xl"></i>
                             <button  class=" text-xs font-bold 
                         ">Cashout</button>
                         </div>
                         <!-- 3rd -->
-                        <div class="border-2 border-gray-400 rounded-lg px-1 py-3 flex flex-col items-center hover:bg-slate-300">
+                        <div id="transfer-show" class="border-2 border-gray-400 rounded-lg px-1 py-3 flex flex-col items-center hover:bg-slate-300">
                             <i class="fa-solid fa-money-bill-transfer text-orange-400 text-xl"></i>
                             <button  class=" text-xs font-bold 
                         ">Transfer Money</button>
                         </div>
                         <!-- 4th -->
-                        <div class="border-2 border-gray-400 rounded-lg px-1 py-3 flex flex-col items-center hover:bg-slate-300">
+                        <div id="bonus-show"   class="border-2 border-gray-400 rounded-lg px-1 py-3 flex flex-col items-center hover:bg-slate-300">
                             <i class="fa-solid fa-sack-dollar text-orange-400 text-xl"></i>
                             <button  class=" text-xs font-bold 
                         ">Get Bonus</button>
@@ -94,7 +94,7 @@
                         ">Pay Bill</button>
                         </div>
                         <!-- 6th -->
-                        <div class="border-2 border-gray-400 rounded-lg px-1 py-3 flex flex-col items-center hover:bg-slate-300">
+                        <div id="show-transaction-section" class="border-2 border-gray-400 rounded-lg px-1 py-3 flex flex-col items-center hover:bg-slate-300">
                             <i class="fa-solid fa-money-check text-orange-400 text-xl"></i>
                             <button  class=" text-xs font-bold 
                         ">Transactions</button>
@@ -103,7 +103,7 @@
                     <!-- all feature end -->
 
                     <!-- latest payment section -->
-                    <div class="hidden w-full mt-5 h-[300px] space-y-2">
+                    <div id="latest-payment" class=" hidden w-full mt-5 h-[300px] space-y-2">
                         <!-- heading -->
                         <div class="flex  justify-between">
                             <h2 class="text-xl font-bold text-black">Latest Payment</h2>
@@ -136,8 +136,15 @@
                     <!-- latest payment section end -->
 
                     <!-- add money form start-->
-                    <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl h-[300px] mt-5">
+                    <div id="add-money-form" class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl  mt-5">
+                        <p class="font-bold mt-1 text-center">Add Money</p>
                         <form class="card-body">
+                            <div class="form-control">
+                                <label class="label">
+                                  <span class="label-text">Bank Account Number</span>
+                                </label>
+                                <input id="" type="text" placeholder="Enter 11digit account number" class="input input-bordered" required />
+                              </div>
                           <div class="form-control">
                             <label class="label">
                               <span class="label-text">Amount to Add</span>
@@ -156,7 +163,90 @@
                         </form>
                       </div>
                     <!-- add money form end-->
+
+                    <!-- cash out form start -->
+                    <div id="cash-out-form" class=" hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl  mt-5">
+                        <p class="font-bold mt-1 text-center">Cash Out</p>
+                        <form class="card-body">
+                            <div class="form-control">
+                                <label class="label">
+                                  <span class="label-text">Agent Number</span>
+                                </label>
+                                <input id="" type="text" placeholder="Enter 11digit number" class="input input-bordered" required />
+                              </div>
+                          <div class="form-control">
+                            <label class="label">
+                              <span class="label-text">Amount</span>
+                            </label>
+                            <input id="input-cashOut-amount" type="text" placeholder="Enter amount to withdraw" class="input input-bordered" required />
+                          </div>
+                          <div class="form-control">
+                            <label class="label">
+                              <span class="label-text">Pin Number</span>
+                            </label>
+                            <input id="input-cashOut-pin" type="password" placeholder="Enter 4digit pin number" class="input input-bordered" required />
+                          </div>
+                          <div class="form-control mt-6">
+                            <button id="cash-out-btn" class="btn btn-primary">Withdraw Money</button>
+                          </div>
+                        </form>
+                      </div>
+                    <!-- cash out form end -->
+
+                    <!-- transfer money start -->
+                    <div id="transfer-form" class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl  mt-5">
+                        <p class="font-bold mt-1 text-center">Transfer Money</p>
+                        <form class="card-body">
+                            <div class="form-control">
+                                <label class="label">
+                                  <span class="label-text">User Account Number</span>
+                                </label>
+                                <input id="" type="text" placeholder="Enter 11digit number" class="input input-bordered" required />
+                              </div>
+                          <div class="form-control">
+                            <label class="label">
+                              <span class="label-text">Amount</span>
+                            </label>
+                            <input id="input-transfer-amount" type="text" placeholder="Enter amount to withdraw" class="input input-bordered" required />
+                          </div>
+                          <div class="form-control">
+                            <label class="label">
+                              <span class="label-text">Pin Number</span>
+                            </label>
+                            <input id="input-transfer-pin" type="password" placeholder="Enter 4digit pin number" class="input input-bordered" required />
+                          </div>
+                          <div class="form-control mt-6">
+                            <button id="transfer-btn" class="btn btn-primary">Send Money</button>
+                          </div>
+                        </form>
+                      </div>
+                    <!-- transfer money end -->
+
+                    <!-- get bonus start -->
+                    <div id="bonus-money-form" class=" hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl  mt-5">
+                        <p class="font-bold mt-1 text-center">Bonus Money</p>
+                        <form class="card-body">
+                            <div class="form-control">
+                          <div class="form-control">
+                            <label class="label">
+                              <span class="label-text">Enter Bonus Coupon</span>
+                            </label>
+                            <input id="input-bonus-coupon" type="text" placeholder="Enter bonus coupon" class="input input-bordered" required />
+                          </div>
+                          <div class="form-control mt-6">
+                            <button id="bonus-btn" class="btn btn-primary">Get Bonus</button>
+                          </div>
+                        </form>
+                      </div>
+                    <!-- get bonus end -->
                      
+                   <!-- transaction -->
+                   <div id="transaction-section" class=" ">
+                    <h3 class="text-3xl text-center ">Transaction History</h3>
+                    <div id="transaction-container" class="">
+
+                    </div>
+                  </div>
                 </div>
             </div>
         </div>
@@ -167,6 +257,10 @@
 <script src="js/utilities.js"></script>
 <script src="js/addMoney.js"></script>
 <script src="js/index.js"></script>
+<script src="js/cashOut.js"></script>
+<script src="js/feature.js"></script>
+<script src="js/transfer.js"></script>
+<script src="js/bonus.js"></script>
 </body>
 
 </html>

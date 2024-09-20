@@ -10,3 +10,15 @@ function getInputTextValueById(id){
     const inputNumber = parseFloat(inputText);
     return inputNumber;
 }
+
+function getShowFormById(id){
+    const addMoney = document.getElementById('add-money-form').classList.add('hidden');
+    const cashOut = document.getElementById('cash-out-form').classList.add('hidden');
+    const latestPayment = document.getElementById('latest-payment').classList.add('hidden');
+    const transferMoney = document.getElementById('transfer-form').classList.add('hidden');
+    const bonusCoupon = document.getElementById('bonus-money-form').classList.add('hidden');
+    const transactionSection = document.getElementById('transaction-section').classList.add('hidden');
+
+
+    document.getElementById(id).classList.remove('hidden');
+}
