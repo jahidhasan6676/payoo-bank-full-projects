@@ -5,7 +5,7 @@ document.getElementById('login-btn').addEventListener('click', function(event){
     
     
     if(mobileNumber === 18 && pinPassword === 1234){
-       window.location.href = '../home.html';
+       window.location.href = 'home.html';
     }
     else{
         alert('wrong number and pin');
