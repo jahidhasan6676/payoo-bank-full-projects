@@ -15,6 +15,16 @@ document.getElementById('cash-out-btn').addEventListener('click', function(event
         }
         const newBalance = balance - cashOut;
         document.getElementById('current-balance').innerText = newBalance;
+
+        // transaction history
+
+        const div = document.createElement('div');
+        div.classList.add('bg-orange-300')
+        div.innerHTML = `
+        <h3 class="text-lg font-bold">Cash Out History</h3>
+        <p>${cashOut} Withdraw. new Balance: ${newBalance}
+        `;
+        document.getElementById('transaction-container').appendChild(div);
     }
     else{
         alert('Failed to cash out')

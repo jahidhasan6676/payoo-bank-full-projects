@@ -14,8 +14,10 @@ document.getElementById('add-money-btn').addEventListener('click', function (eve
 
         // transaction history
         const p = document.createElement('p');
-        p.innerText = `Added ${addMoney}TK. New Balance: ${newBalance}`;
+        p.classList.add('bg-purple-300')
+        p.innerText = `Added ${addMoney} TK. new Balance:${newBalance}`;
         document.getElementById('transaction-container').appendChild(p);
+        
     }
     else {
         alert('Failed to add money')

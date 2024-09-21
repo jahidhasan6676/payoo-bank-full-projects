@@ -14,5 +14,10 @@ document.getElementById('bonus-show').addEventListener('click', function(){
     const bonusCoupon = getShowFormById('bonus-money-form');
 })
 
+document.getElementById('payBill-show').addEventListener('click', function(){
+    const payBill = getShowFormById('pay-bill-form');
+})
+
 document.getElementById('show-transaction-section').addEventListener('click', function(){
-    const transaction = getShowFormById('transaction-section')});
+    const transaction = getShowFormById('transaction-section');
+})
